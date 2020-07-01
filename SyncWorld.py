@@ -39,9 +39,9 @@ try:
     os.chdir("McServer")
     print(os.getcwd())
     #Here is where the server starts
-    THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
-    my_file = os.path.join(THIS_FOLDER, 'server.jar')
-    for output_line in run_command('java -Xmx1024M -Xms1024M -jar '+ my_file+' nogui'):
+    # THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+    # my_file = os.path.join(THIS_FOLDER, 'server.jar')
+    for output_line in run_command('./server.jar'):
         print(output_line)
 
     os.chdir("../")
@@ -51,7 +51,7 @@ except Exception as err:
     f.write("False")
     f.close()
 
-    repo.git.add(".")
+    repo.git.add("mcServerState.txt")
     repo.index.commit("World Save")
     origin = repo.remote(name='origin')
     origin.push()   
@@ -64,7 +64,7 @@ f = open("mcServerState.txt", "w")
 f.write("False")
 f.close()
 
-repo.git.add("mcServerState.txt")
+repo.git.add(".")
 repo.index.commit("World Save")
 origin = repo.remote(name='origin')
 origin.push()
