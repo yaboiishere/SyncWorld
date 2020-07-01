@@ -37,7 +37,7 @@ try:
     repo.remotes.origin.pull()
 
     os.chdir("McServer")
-
+    print(os.getcwd())
     #Here is where the server starts
     for output_line in run_command('java -Xmx1024M -Xms1024M -jar server.jar nogui'):
         print(output_line)
