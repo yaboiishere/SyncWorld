@@ -3,3 +3,4 @@ McServer/server.properties
 McServer/logs/*
 /McServer/logs/*
 McServer/logs/latest.log
+McServer/logs/latest.log
