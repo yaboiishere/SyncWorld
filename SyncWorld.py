@@ -10,7 +10,8 @@ COMMIT_MESSAGE = 'updated state'
 def run_command(command):
     p = subprocess.Popen(command,
                      stdout=subprocess.PIPE,
-                     stderr=subprocess.STDOUT)
+                     stderr=subprocess.STDOUT,
+                     shell=True)
     return iter(p.stdout.readline, b'')
 
 repo = Repo(PATH_OF_GIT_REPO)
@@ -39,9 +40,9 @@ try:
     os.chdir("McServer")
     print(os.getcwd())
     #Here is where the server starts
-    # THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
-    # my_file = os.path.join(THIS_FOLDER, 'server.jar')
-    for output_line in run_command('./server.jar'):
+    THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+    my_file = os.path.join(THIS_FOLDER, 'server.jar')
+    for output_line in run_command('java -Xmx1024M -Xms1024M -jar '+ my_file):
         print(output_line)
 
     os.chdir("../")
