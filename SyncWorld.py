@@ -39,7 +39,7 @@ try:
     os.chdir("McServer")
     print(os.getcwd())
     #Here is where the server starts
-    for output_line in run_command('java -Xmx1024M -Xms1024M -jar server.jar'):
+    for output_line in run_command('java -jar server.jar'):
         print(output_line)
 
     os.chdir("../")
