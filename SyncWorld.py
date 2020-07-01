@@ -15,8 +15,7 @@ def run_command(command):
     return iter(p.stdout.readline, b'')
 
 repo = Repo(PATH_OF_GIT_REPO)
-repo.git.add("-u")
-repo.git.reset("mcServerState.txt")
+repo.git.add("McServer/*")
 repo.index.commit("World Save")
 origin = repo.remote(name='origin')
 origin.push()
