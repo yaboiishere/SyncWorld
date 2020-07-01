@@ -43,7 +43,7 @@ try:
         print(output_line)
 
     os.chdir("../")
-except:
+except as err:
     os.chdir("../")
     f = open("mcServerState.txt", "w")
     f.write("False")
@@ -55,6 +55,7 @@ except:
     origin.push()   
 
     print("There was an error")
+    print(err)
     exit()
 
 f = open("mcServerState.txt", "w")
