@@ -20,7 +20,7 @@ def getShitDone:
     return True
 
 if getShitDone:
-    ("Got shit done")
+    print("Got shit done")
 
 f = open("mcServerState.txt", "r")
 state = f.readline()
