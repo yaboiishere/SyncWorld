@@ -3,6 +3,7 @@ from git import Repo
 import os
 import socket
 import subprocess
+import time
 
 PATH_OF_GIT_REPO = os.getcwd()
 COMMIT_MESSAGE = 'updated state'
@@ -21,16 +22,17 @@ repo = Repo(PATH_OF_GIT_REPO)
 # origin.push()
 
 repo.remotes.origin.pull()
+time.sleep(10)
+# def getShitDone():
+#     repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
+#     return True
 
-def getShitDone():
-    repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
-    return True
-
-if getShitDone():
-    print("Got shit done")
+# if getShitDone():
+#     print("Got shit done")
 
 f = open("mcServerState.txt", "r")
 state = f.readline()
+print(state)
 
 try:
     if state == "True":
