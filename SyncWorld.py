@@ -21,7 +21,7 @@ f = open("mcServerState.txt", "r")
 state = f.readline()
 
 try:
-    if state == True:
+    if state == "True":
         print("Server is working")
         exit()
     f.close()
