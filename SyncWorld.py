@@ -15,10 +15,13 @@ def run_command(command):
     return iter(p.stdout.readline, b'')
 
 repo = Repo(PATH_OF_GIT_REPO)
-repo.git.add("McServer/*")
-repo.index.commit("World Save")
-origin = repo.remote(name='origin')
-origin.push()
+# repo.git.add("McServer/*")
+# repo.index.commit("World Save")
+# origin = repo.remote(name='origin')
+# origin.push()
+
+repo.remotes.origin.pull()
+
 def getShitDone():
     repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
     return True
@@ -45,8 +48,6 @@ try:
     origin.push()
 
     print("No server is running starting yours")
-
-    repo.remotes.origin.pull()
 
     os.chdir("McServer")
     print(os.getcwd())
