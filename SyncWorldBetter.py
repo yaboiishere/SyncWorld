@@ -14,19 +14,27 @@ def run_command(command):
     return iter(p.stdout.readline, b'')
 
 repo = Repo(PATH_OF_GIT_REPO)
-state = ""
-repo.remote().origin.repo.git.checkout("origin/master", "mcServerState")
-with open("mcServerState.txt", "r") as file:
-    state = file.readline()
-    if state == True
-        print("Server is working")
-        exit()
-    file.close()
-    file.open("mcServerState.txt", "w")
-    file.write("True")
-    file.close()
+repo.remote().origin.repo.git.checkout("origin/master", "mcServerState.txt")
+
+f = file.open("mcServerState.txt", "r")
+state = f.readline()
+print(state)
+if state == True
+    print("Server is working")
+    exit()
+f.close()
+
+f.open("mcServerState.txt", "w")
+f.write("True")
+f.close()
+
+repo.git.add("mcServerState.txt")
+repo.index.commit(COMMIT_MESSAGE)
+origin = repo.remote(name='origin')
+origin.push()
 
 repo.remotes.origin.pull()
+
 os.chdir("McServer")
 #Here is where the server starts
 for output_line in run_command('java -Xmx1024M -Xms1024M -jar server.jar nogui'):
