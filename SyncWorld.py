@@ -15,11 +15,11 @@ def run_command(command):
     return iter(p.stdout.readline, b'')
 
 repo = Repo(PATH_OF_GIT_REPO)
-def getShitDone:
+def getShitDone():
     repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
     return True
 
-if getShitDone:
+if getShitDone():
     print("Got shit done")
 
 f = open("mcServerState.txt", "r")
