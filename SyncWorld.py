@@ -43,7 +43,7 @@ try:
         print(output_line)
 
     os.chdir("../")
-except as err:
+except Exception as err:
     os.chdir("../")
     f = open("mcServerState.txt", "w")
     f.write("False")
