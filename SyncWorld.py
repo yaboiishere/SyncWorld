@@ -44,6 +44,7 @@ try:
 
     os.chdir("../")
 except:
+    os.chdir("../")
     f = open("mcServerState.txt", "w")
     f.write("False")
     f.close()
