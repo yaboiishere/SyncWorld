@@ -22,7 +22,7 @@ repo = Repo(PATH_OF_GIT_REPO)
 # origin.push()
 
 repo.remotes.origin.pull()
-time.sleep(2)
+time.sleep(10)
 # def getShitDone():
 #     repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
 #     return True
