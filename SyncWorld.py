@@ -42,4 +42,14 @@ for output_line in run_command('java -Xmx1024M -Xms1024M -jar server.jar nogui')
     print(output_line)
 
 os.chdir("../")
+
+f = open("mcServerState.txt", "w")
+f.write("False")
+f.close()
+
+repo.git.add("mcServerState.txt")
+repo.index.commit(COMMIT_MESSAGE)
+origin = repo.remote(name='origin')
+origin.push()
+
 print("done")
