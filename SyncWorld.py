@@ -22,7 +22,7 @@ repo = Repo(PATH_OF_GIT_REPO)
 # origin.push()
 
 repo.remotes.origin.pull()
-time.sleep(10)
+# time.sleep(10)
 # def getShitDone():
 #     repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
 #     return True
@@ -35,9 +35,12 @@ state = f.readline()
 print(state)
 
 try:
-    if state == "True":
-        print("Server is working")
-        exit()
+    # if state == "True":
+    #     print("Server is working")
+    #     exit()
+    while state != "True":
+        repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
+        state = f.readline()
     f.close()
 
     f = open("mcServerState.txt", "w")
