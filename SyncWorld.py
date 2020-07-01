@@ -44,7 +44,7 @@ try:
     #Here is where the server starts
     THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
     my_file = os.path.join(THIS_FOLDER, 'server.jar')
-    for output_line in run_command('java -Xmx1024M -Xms1024M -jar '+ my_file):
+    for output_line in run_command('java -Xmx1024M -Xms1024M -jar '+ my_file + " nogui"):
         print(output_line)
 
     os.chdir("../")
