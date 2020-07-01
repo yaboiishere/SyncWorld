@@ -39,7 +39,9 @@ try:
     os.chdir("McServer")
     print(os.getcwd())
     #Here is where the server starts
-    for output_line in run_command('java -Xmx1024M -Xms1024M -jar server.jar nogui'):
+    THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+    my_file = os.path.join(THIS_FOLDER+"/McServer", 'server.jar')
+    for output_line in run_command('java -Xmx1024M -Xms1024M -jar '+ my_file+' nogui'):
         print(output_line)
 
     os.chdir("../")
