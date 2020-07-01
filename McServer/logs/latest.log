@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 [00:48:44] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
 [00:48:46] [main/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
 [00:48:46] [main/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
@@ -57,3 +59,4 @@
 [00:49:51] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
 [00:49:51] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
 [00:49:51] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+>>>>>>> bed923ef0cff8d8cd7c19db6fa7e7d09c00091d3
