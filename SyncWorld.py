@@ -19,7 +19,7 @@ repo.remote("origin").repo.git.checkout("origin/master", "mcServerState.txt")
 
 f = open("mcServerState.txt", "r")
 state = f.readline()
-print("No server is running starting yours")
+
 try:
     if state == True:
         print("Server is working")
@@ -29,11 +29,13 @@ try:
     f = open("mcServerState.txt", "w")
     f.write("True")
     f.close()
-
+    
     repo.git.add("mcServerState.txt")
     repo.index.commit(COMMIT_MESSAGE)
     origin = repo.remote(name='origin')
     origin.push()
+
+    print("No server is running starting yours")
 
     repo.remotes.origin.pull()
 
