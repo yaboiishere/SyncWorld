@@ -23,3 +23,6 @@ To make a new server
         pip install -r .\requirements.txt
     8. To start the server type in terminal:
         py .\SyncWorld.py
+
+
+If you need server.properties there is the default generated one in the repository just copy and rename it in the server folder
