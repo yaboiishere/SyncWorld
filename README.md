@@ -1,8 +1,8 @@
-To make a new server
-    1. Install gitbash and python3
-    2. Make a git profile
-    3. Make a git repo
-        3.1 Navigate to the directory you would like to use wit gitbash
+To make a new server\
+    1. Install gitbash and python3\
+    2. Make a git profile\
+    3. Make a git repo\
+        3.1 Navigate to the directory you would like to use wit gitbash\
         3.2 Paste the following:
             git init
             git add .
