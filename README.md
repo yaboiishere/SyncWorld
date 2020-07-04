@@ -1,4 +1,4 @@
-# To make a new server\
+To make a new server\
     &nbsp;&nbsp;&nbsp;1. Install gitbash and python3\
     &nbsp;&nbsp;&nbsp;2. Make a git profile\
     &nbsp;&nbsp;&nbsp;3. Make a git repo\
